@@ -9,7 +9,14 @@ def index(request):
 
 def product_list(request):
 
+    page = 1
+    if request.GET:
+        page=request.GET.get('page',1)
+
     product__list = Product.objects.all()
+    product_paginator = Paginator(product__list,5)
+    product__list = product_paginator.get_page(page)
+
     context = {'products':product__list}
     return render(request,'product.html',context)
 
