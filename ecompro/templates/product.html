@@ -1,5 +1,5 @@
 {% load static %}
-{% load pages %}
+
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
 
@@ -96,9 +96,7 @@
 						<div class="filter-title filter-title--type-two">
 							<ul class="product-filter-menu">
 								<li class="active" data-filter="*">All</li>
-								<li data-filter=".hot">hot products</li>
-								<li data-filter=".new">new products</li>
-								<li data-filter=".sale">sale products</li>
+								
 							</ul>
 						</div>
 						<!--=======  End of fitler titles  =======-->
@@ -248,67 +246,7 @@
 
 											<!--=======  content  =======-->
 
-											<div class="single-widget-product__content">
-
-												<div class="single-widget-product__content__top">
-													<h3 class="product-title"><a href="shop-product-basic.html">Wooden Table</a></h3>
-													<div class="price">
-														<span class="main-price discounted">$270.00</span>
-														<span class="discounted-price">$220.00</span>
-													</div>
-													<div class="rating">
-														<i class="ion-android-star"></i>
-														<i class="ion-android-star"></i>
-														<i class="ion-android-star-outline"></i>
-														<i class="ion-android-star-outline"></i>
-														<i class="ion-android-star-outline"></i>
-													</div>
-												</div>
-
-											</div>
-
-											<!--=======  End of content  =======-->
-										</div>
-									</div>
-
-									<!--=======  End of single widget product  =======-->
-
-									<!--=======  single widget product  =======-->
-									<div class="single-widget-product-wrapper">
-										<div class="single-widget-product">
-											<!--=======  image  =======-->
-
-											<div class="single-widget-product__image">
-												<a href="shop-product-basic.html">
-													<img src="{% static 'images/products/product-furniture-11-100x100.jpg' %}" class="img-fluid" alt="">
-												</a>
-											</div>
-
-											<!--=======  End of image  =======-->
-
-											<!--=======  content  =======-->
-
-											<div class="single-widget-product__content">
-
-												<div class="single-widget-product__content__top">
-													<h3 class="product-title"><a href="shop-product-basic.html">Sofa with cushion</a></h3>
-													<div class="price">
-														<span class="main-price discounted">$660.00</span>
-														<span class="discounted-price">$600.00</span>
-													</div>
-													<div class="rating">
-														<i class="ion-android-star"></i>
-														<i class="ion-android-star"></i>
-														<i class="ion-android-star"></i>
-														<i class="ion-android-star"></i>
-														<i class="ion-android-star"></i>
-													</div>
-												</div>
-
-
-
-											</div>
-
+											
 											<!--=======  End of content  =======-->
 										</div>
 									</div>
@@ -385,80 +323,13 @@
 
 						<!--=======  End of page sidebar  =======-->
 					</div>
-					<div class="col-lg-12 order-1 order-lg-2 mb-md-80 mb-sm-80">
+					
 
-						<div class="row product-isotope shop-product-wrap four-column">
-
-							<!--=======  single product  =======-->
-							<div class="col-12 col-lg-3 col-md-6 col-sm-6 mb-45 hot sale">
-								<div class="single-product">
-									<!--=======  single product image  =======-->
-
-									<div class="single-product__image">
-										<a class="image-wrap" href="shop-product-basic.html">
-											<img src="{% static 'images/products/cloth-1-1-600x800.jpg' %}" class="img-fluid" alt="">
-											<img src="{% static 'images/products/cloth-1-2-600x800.jpg' %}" class="img-fluid" alt="">
-										</a>
-
-										<div class="single-product__floating-badges">
-											<span class="onsale">-10%</span>
-											<span class="hot">hot</span>
-										</div>
-
-										<div class="single-product__floating-icons">
-											<span class="wishlist"><a href="#" data-tippy="Add to wishlist" data-tippy-inertia="true"
-													data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true"
-													data-tippy-theme="sharpborder" data-tippy-placement="left"><i
-														class="ion-android-favorite-outline"></i></a></span>
-
-											<span class="compare"><a href="#" data-tippy="Compare" data-tippy-inertia="true"
-													data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true"
-													data-tippy-theme="sharpborder" data-tippy-placement="left"><i
-														class="ion-ios-shuffle-strong"></i></a></span>
-
-											<span class="quickview"><a class="cd-trigger" href="#qv-1" data-tippy="Quick View"
-													data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50"
-													data-tippy-arrow="true" data-tippy-theme="sharpborder" data-tippy-placement="left"><i
-														class="ion-ios-search-strong"></i></a></span>
-										</div>
-
-
-									</div>
-
-									<!--=======  End of single product image  =======-->
-
-									
-
-									
-
-									<!--=======  single product content  =======-->
-
-									
-
-									
-
-									
-
-									
-
-									
-									<!--=======  single product content  =======-->
-
-									
-									
-
-									<!--=======  single product content  =======-->
-
-									
-
-									<!--=======  End of single product content  =======-->
-								</div>
-							</div>
-							<!--=======  End of single product  =======-->
-
-
-						</div>
-
+<!--=======================================================  single product  ======================================================-->
+{% block prodata %}
+{% include 'product-data.html' %}
+ {% endblock prodata %}
+<!--=====================================================  End of single product  =================================================-->
 						<div class="row">
 							<div class="col-lg-12 text-center mt-30">
 								<a class="lezada-button lezada-button--medium lezada-button--icon--left" href="#"><i

@@ -6,7 +6,7 @@ register = template.Library()
 @register.filter(name='pages')
 def pages(list_data,page_size):
     page = []
-    i = []
+    i = 0
     for data in list_data:
         page.append(data)
         i = i+1
