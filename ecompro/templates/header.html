@@ -51,8 +51,10 @@
                                         <li><a href="faq.html">F.A.Q</a></li>
                                         <li><a href="coming-soon.html">Coming Soon</a></li>
                                         <li><a href="404.html">404</a></li>
-                                        <li><a href="my-account.html">My account</a></li>
-                                        <li><a href="compare.html">Compare</a></li>
+                                        {% if user.is_authenticated %}
+                                        <li><a href="my-account.html">{{user.username}}</a></li>
+                                        <li><a href="{% url 'logout' %}">logout</a></li>
+                                        {% endif %}
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-childrenn "><a href="blog-grid-full-width.html">Blog</a>
@@ -82,13 +84,14 @@
 
                         <!--=======  End of single-icon  =======-->
                         <!--=======  single-icon  =======-->
-
+                        {% if not user.is_authenticated %}
                         <div class="single-icon user-login">
                             <a href="{% url 'account' %}">
                                 <i class="ion-android-person"></i>
                             </a>
+                            
                         </div>
-
+                                {% endif %}
                         <!--=======  End of single-icon  =======-->
                         <!--=======  single-icon  =======-->
 
@@ -101,13 +104,14 @@
 
                         <!--=======  End of single-icon  =======-->
                         <!--=======  single-icon  =======-->
-
+                        {% if user.is_authenticated %}
                         <div class="single-icon cart">
                             <a href="javascript:void(0)" id="offcanvas-cart-icon">
                                 <i class="ion-ios-cart"></i>
                                 <span class="count">3</span>
                             </a>
                         </div>
+                        {% endif %}
                         <!--=======  End of single-icon  =======-->
                     </div>
                     <!--=======  End of header right icons  =======-->
