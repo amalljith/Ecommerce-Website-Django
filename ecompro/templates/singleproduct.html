@@ -131,7 +131,7 @@
 										<!--=======  single image  =======-->
 
 										<div class="single-image">
-											<img src="{% static 'images/shop-product/aa.jpg' %}" class="img-fluid" alt="">
+											<img src={{product.image.url}} class="img-fluid" alt="">
 										</div>
 
 										<!--=======  End of single image  =======-->
@@ -182,7 +182,7 @@
 									<!--=======  shop product title  =======-->
 
 									<div class="shop-product__title mb-15">
-										<h2>High waist trousers</h2>
+										<h2>{{product.title}}</h2>
 									</div>
 
 									<!--=======  End of shop product title  =======-->
@@ -191,7 +191,7 @@
 
 									<div class="shop-product__price mb-30">
 										
-										<span class="discounted-price">$180.00</span>
+										<span class="discounted-price">{{product.price}}</span>
 									</div>
 
 									<!--=======  End of shop product price  =======-->
@@ -199,10 +199,7 @@
 									<!--=======  shop product short description  =======-->
 
 									<div class="shop-product__short-desc mb-50">
-										Hurley Dry-Fit Chino Short. Men's chino short. Outseam Length: 19 Dri-FIT Technology helps keep you
-										dry and comfortable. Made with sweat-wicking fabric. Fitted waist with belt loops. Button waist with
-										zip fly provides a classic look and feel . Back welt pockets and coin pocket for storage. Dual side
-										seam pockets. Heat transferred logos. 70% nylon 24% polyester 6% spandex. Imported.
+										{{product.description}}
 									</div>
 
 									<!--=======  End of shop product short description  =======-->
